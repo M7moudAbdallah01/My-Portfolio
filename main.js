@@ -15,15 +15,15 @@ backToTopButton.addEventListener("click", () => {
   });
 });
 
-const menuIcon = document.getElementById("menu-icon");
-const navbar = document.getElementById("navbar");
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav");
 
-menuIcon.addEventListener("click", () => {
-  navbar.classList.toggle("active");
+menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
 });
 
-document.querySelectorAll("#navbar a").forEach(link => {
-  link.addEventListener("click", () => {
-    navbar.classList.remove("active");
-  });
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
 });
