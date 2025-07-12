@@ -165,9 +165,6 @@ section{
 .project-card:hover{
     transform: scale(1.1);
 }
-.project-card:hover .project-img{
-    opacity: 0.9;
-}
 .project-img img{
     width: 100%;
 }
