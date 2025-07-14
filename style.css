@@ -37,10 +37,13 @@ nav a{
     padding: 10px;
     font-size: 20px;
     transition: 0.7s ease;
+    box-shadow: 1px greenyellow;
+    border-radius: 10px;
 }
 nav a:hover{
     color: rgb(4, 192, 4);
     transform: scale(1.1);
+    box-shadow:  1px 0px 3px rgb(73, 108, 22);
 }
 /* =========================================================== */
 section{
