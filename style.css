@@ -490,27 +490,28 @@ footer p {
     height: 200px !important;
     margin-bottom: 20px;
   }
+
+  .projects-container{
+    grid-template-columns: repeat(1 , 1fr);
+  }
+  /* ✅ هنا التعديل المطلوب */
   .projects .content {
     display: grid;
-    grid-template-columns: 1fr !important; /* مشروع واحد في الصف */
-    gap: 20px;
+    grid-template-rows: 1fr !important; 
+    gap: 25px; /* خليت المسافة أوضح بين كل مشروع */
+    justify-items: center; /* عشان العناصر تكون في النص */
+    width: 100%;
   }
 
   .project-img img {
     width: 100%;
-    height: auto; /* علشان الصورة تظهر كاملة بالطول والعرض */
+    height: auto; 
     object-fit: contain;
   }
 
   .main .text {
     max-width: 100% !important;
     color: #fff;
-  }
-
-  .stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
   }
 
   .stats {
@@ -563,7 +564,7 @@ footer p {
     margin-left: 20px;
   }
 }
-/* === Responsive Navbar Fix === */
+
 @media (max-width: 768px) {
   header {
     padding: 10px 20px;
@@ -573,7 +574,7 @@ footer p {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px; /* تحت الـ header */
+    top: 70px; 
     right: 20px;
     background: #f0f0f0;
     border-radius: 10px;
@@ -603,7 +604,6 @@ footer p {
   }
 }
 
-/* على الشاشات الكبيرة nav يظهر عادي */
 @media (min-width: 769px) {
   nav {
     display: flex !important;
@@ -619,17 +619,15 @@ footer p {
   }
 }
 
-
 .floating-icons {
   position: fixed;
   left: 0;
   width: 100%;
-  height: calc(100% - 120px); /* لغاية فوق الفوتر */
+  height: calc(100% - 120px); 
   overflow: hidden;
-  z-index: 999; /* أعلى من أي سكشن عادي */
-  pointer-events: none; /* عشان متأثرش على الضغط على العناصر وراها */
+  z-index: 999; 
+  pointer-events: none; 
 }
-
 
 .floating-icons i {
   position: absolute;
@@ -653,7 +651,7 @@ footer p {
   }
 }
 
-/* توزيع عشوائي */
+
 .floating-icons i:nth-child(1) { left: 10%; animation-duration: 12s; font-size: 25px; }
 .floating-icons i:nth-child(2) { left: 30%; animation-duration: 15s; font-size: 35px; }
 .floating-icons i:nth-child(3) { left: 50%; animation-duration: 18s; font-size: 28px; }
