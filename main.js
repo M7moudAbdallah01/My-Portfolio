@@ -46,7 +46,7 @@ backToTopButton.addEventListener("click", () => {
 
 
 const typingElement = document.getElementById("typing");
-const words = [ "Mahmoud Abdallah " , "Aspiring Penetration Tester "];
+const words = [ "Mahmoud Abdallah " , "Aspiring Penetration <br> Tester "];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -55,9 +55,9 @@ function typeEffect() {
   let currentWord = words[wordIndex];
   
   if (isDeleting) {
-    typingElement.textContent = currentWord.substring(0, charIndex--);
+    typingElement.innerHTML = currentWord.substring(0, charIndex--);
   } else {
-    typingElement.textContent = currentWord.substring(0, charIndex++);
+    typingElement.innerHTML = currentWord.substring(0, charIndex++);
   }
 
   if (!isDeleting && charIndex === currentWord.length) {

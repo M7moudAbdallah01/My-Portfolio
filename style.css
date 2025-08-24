@@ -56,12 +56,6 @@ nav button{
     cursor: pointer;
 }
 
-/* .dark-mode {
-    background: linear-gradient(135deg, #1a1a1a, #121212);
-    color: #eee;
-} */
-
-/* =========================================================== */
 section {
   padding: 150px;
 }
@@ -138,15 +132,17 @@ section {
 .stat h2 {
   font-size: 40px;
   font-weight: 800;
-  color: #4e9f3d; /* أخضر رئيسي */
+  color: #4e9f3d;
 }
 
 .stat p {
   font-size: 16px;
   font-weight: 500;
   margin-top: 5px;
-  color: #ccc; /* رمادي ناعم */
+  color: #ccc;
 }
+
+/* زرار View My Work */
 .btn {
   color: #fff;
   background-color: #4e9f3d;
@@ -154,11 +150,11 @@ section {
   font-weight: 400;
   transition: 0.7s ease;
   border-radius: 15px;
-  padding: 10px;
+  padding: 10px 25px;
   text-decoration: none;
-  margin: 30px 0px;
+  display: inline-block;
+  margin: 20px auto;
   text-align: center;
-  margin-left: 37%;
 }
 
 .btn:hover {
@@ -182,7 +178,6 @@ section {
   transform: scale(1.1);
 }
 
-/* =========================================================== */
 .title {
   display: flex;
   justify-content: center;
@@ -230,7 +225,6 @@ section {
   margin: 10px;
 }
 
-/* =========================================================== */
 .projects {
   background: url(images/finaledit.jpg) no-repeat;
   background-size: cover;
@@ -301,7 +295,6 @@ section {
   transform: scale(1.1);
 }
 
-/* =========================================================== */
 .skills {
   position: relative;
   padding: 100px 50px;
@@ -357,7 +350,6 @@ section {
   min-width: 340px;
 }
 
-/* =========================================================== */
 footer {
   background-color: #090b20;
 }
@@ -391,7 +383,6 @@ footer p {
   transform: scale(1.1);
 }
 
-/* Go To Top  */
 #Backtotop {
   background-color: #4a4a4a;
   color: white;
@@ -435,8 +426,6 @@ footer p {
   overflow: hidden;
 }
 
-/* ==== Responsive Navbar and Hero Section ==== */
-
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -448,68 +437,44 @@ footer p {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #f0f0f0;
-    z-index: 10000;
-  }
-
-  .name a {
-    font-size: 24px;
-  }
-
-  nav {
-    position: fixed;
-    top: 60px;
-    right: 0;
-    width: 60vw;
-    height: 100vh;
-    background-color: #f0f0f0;
-    display: none;
+/* === Responsive Section Main === */
+@media (max-width: 1024px) {
+  .main-content {
     flex-direction: column;
-    padding-top: 20px;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
   }
 
-  nav.active {
-    display: flex;
+  .main .image img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
   }
 
-  nav a {
-    padding: 15px 20px;
-    font-size: 18px;
-    border-bottom: 1px solid #ddd;
-    color: #4e9f3d;
-    font-weight: 600;
+  .main .text {
+    max-width: 100%;
   }
 
-  nav a:hover {
-    background-color: #4e9f3d;
-    color: #fff;
+  .stats {
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
   }
 
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    color: #4e9f3d;
-    cursor: pointer;
-    z-index: 11000;
+  .social-icons {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
   }
+}
 
-  /* Hero: الصورة فوق النص و full width مع محاذاة وسط */
+@media (max-width: 768px) {
   .main-content {
     flex-direction: column !important;
     align-items: center;
     padding: 20px;
+    text-align: center;
   }
 
   .main .image img {
@@ -521,10 +486,110 @@ footer p {
   .main .text {
     max-width: 100% !important;
     color: #fff;
-    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stats .stat h2 {
+    font-size: 24px;
+  }
+
+  .stats .stat p {
+    font-size: 13px;
   }
 
   section.main {
     padding: 100px 20px 60px 20px !important;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .stats .stat h2 {
+    font-size: 20px;
+  }
+
+  .stats .stat p {
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 15px auto;
+  }
+
+  .social-icons {
+    gap: 10px;
+    margin-left: 20px;
+  }
+}
+/* === Responsive Navbar Fix === */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* تحت الـ header */
+    right: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    gap: 10px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    color: #4e9f3d;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+
+  nav a:hover {
+    background: #4e9f3d;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* على الشاشات الكبيرة nav يظهر عادي */
+@media (min-width: 769px) {
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .menu-toggle {
+    display: none;
   }
 }
