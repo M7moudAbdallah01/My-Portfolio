@@ -303,6 +303,26 @@ section {
   border-radius: 50%;
 }
 
+.cer-container {
+  display: grid;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cer-img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cer-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; 
+}
+
+
 .project-info {
   padding: 15px;
 }
@@ -686,6 +706,12 @@ footer p {
   100% {
     transform: translateY(-100vh) rotate(360deg);
     opacity: 0;
+  }
+}
+@media (max-width: 768px) {
+  .cer-img img {
+    object-fit: contain; 
+    height: auto;        
   }
 }
 
