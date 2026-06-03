@@ -46,7 +46,7 @@ backToTopButton.addEventListener("click", () => {
 
 
 const typingElement = document.getElementById("typing");
-const words = [ "Mahmoud Abdallah " , "Aspiring Penetration <br> Tester "];
+const words = [ "Mahmoud Abdallah " , "Jr. Penetration Tester "];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
