@@ -420,14 +420,13 @@ section {
 
 @media (max-width: 768px) {
   .cer-container .project-card {
-  width: 187%;
-  
-
+    width: 100%;
   }
+
   .cer-container {
     grid-template-columns: 1fr;
-    margin-right: 40px;
-    width: 100px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .cer-img {
@@ -435,10 +434,20 @@ section {
   }
 
   .cer-img img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
-    height: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 20px !important;
+  }
+}
+
+
+
 
 
 .project-info {
