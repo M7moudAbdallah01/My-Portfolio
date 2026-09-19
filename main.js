@@ -26,7 +26,7 @@ backToTopButton.addEventListener("click", () => {
 });
 
 const typingElement = document.getElementById("typing");
-const words = [ "Mahmoud Abdallah " , "Jr. Penetration Tester "];
+const words = [ "Mahmoud Abdallah " , "Penetration Tester "];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
